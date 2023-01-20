@@ -20,6 +20,7 @@
     "rehype-slug": "^5.1.0"
   },
   "devDependencies": {
+    "@rollup/plugin-yaml": "^4.0.1",
     "sass": "^1.57.1"
   }
 }
