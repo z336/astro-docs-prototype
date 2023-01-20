@@ -1,0 +1,49 @@
+.layout {
+  @media (min-width: 60rem) {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr 3fr;
+  }
+  @media (min-width: 80rem) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .sidebar {
+    @media (min-width: 60rem) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+    @media (max-width: 60rem) {
+      display: none;
+    }
+  }
+
+  .content {
+    min-height: calc(100vh - var(--offset));
+    @media (min-width: 60rem) {
+      grid-column: 2;
+    }
+    @media (min-width: 80rem) {
+      grid-row: 1;
+    }
+  }
+
+  .content.page {
+    @media (min-width: 80rem) {
+      grid-column: 2 / span 3;
+      max-width: 90ch;
+    }
+  }
+
+  .table-of-contents {
+    @media (min-width: 80rem) {
+      grid-column: 3;
+    }
+  }
+
+  .sticky {
+    position: sticky;
+    top: var(--offset);
+    overflow-y: auto;
+  }
+}

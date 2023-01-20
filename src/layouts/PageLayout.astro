@@ -5,13 +5,13 @@ const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="wrapper | layout">
+  <div class="wrapper | region | layout">
     <aside class="sidebar">
-      <nav>
+      <nav class="sticky">
         <DocsMenu />
       </nav>
     </aside>
-    <article class="content | page">
+    <article class="flow | content | page">
       <h1>{pageTitle}</h1>
       <slot />
     </article>

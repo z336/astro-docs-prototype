@@ -1,0 +1,14 @@
+.prose {
+  --wrapper-max-width: 60rem;
+  --flow-space: var(--space-l-xl);
+  // padding-inline: var(--gutter);
+  figcaption {
+    --flow-space: 0;
+  }
+}
+
+// Less flow space under headings and between multiple paragraphs
+.prose :is(h1, h2, h3, h4) + *,
+p + p {
+  --flow-space: var(--space-s-m);
+}

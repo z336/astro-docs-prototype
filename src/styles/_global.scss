@@ -6,63 +6,83 @@ body {
   overflow-y: scroll;
 }
 
-header {
-  background-color: dodgerblue;
+h1 {
+  font-size: var(--step-3);
 }
 
-.layout {
-  @media (min-width: 60rem) {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+h2 {
+  font-size: var(--step-2);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+h4 {
+  font-size: var(--step-0);
+}
+
+h5 {
+  font-size: var(--step--1);
+}
+
+h6 {
+  font-size: var(--step--2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-block-start: var(--offset);
+}
+
+a {
+  color: currentColor;
+  text-decoration: underline 0.1rem;
+}
+
+a:is(:hover, :focus) {
+  text-underline-offset: 0.35rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+details {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  td,
+  th {
+    padding-block: var(--space-3xs-2xs);
+    padding-inline: var(--space-2xs-xs);
+    border: var(--border-thin) solid var(--color-dark);
   }
-  @media (min-width: 80rem) {
-    grid-template-columns: 1fr 2fr 1fr;
+
+  th {
+    background-color: var(--color-blue-light);
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--color-grey-light);
+  }
+
+  tr:hover {
+    background-color: var(--color-callout-yellow);
   }
 }
 
-.sidebar {
-  @media (min-width: 60rem) {
-    grid-column: 1;
-    grid-row: 1 / span 2;
+.astro-code {
+  padding: 2rem;
+  code {
+    font-family: var(--font-mono);
   }
-  @media (max-width: 60rem) {
-    display: none;
-  }
-  background-color: aquamarine;
-}
-
-.content {
-  @media (min-width: 80rem) {
-    grid-row: 1;
-  }
-  @media (min-width: 60rem) {
-    grid-column: 2;
-  }
-  background-color: coral;
-}
-
-.content.page {
-  @media (min-width: 80rem) {
-    grid-column: 2 / span 3;
-  }
-}
-
-.sidebar-right {
-  @media (min-width: 80rem) {
-    grid-column: 3;
-  }
-  // @media (max-width: 60rem) {
-  //   grid-column: 2;
-  // }
-  background-color: hotpink;
-}
-
-.sticky {
-  position: sticky;
-  top: var(--offset);
-  overflow-y: auto;
-}
-
-footer {
-  background-color: yellowgreen;
 }

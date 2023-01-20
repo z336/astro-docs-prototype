@@ -2,7 +2,7 @@
 layout: ../../../layouts/ArticleLayout.astro
 title: 'My First Blog Post'
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
+description: 'Chili pepper simmer grapefruit jalapeño Thai basil curry hummus hot soba noodles thyme lemonade zest heat soy milk rich coconut cream basmati. Pine nuts red pepper chia seeds cilantro lime vinaigrette red grapes apricot cayenne dill green tea lime Thai super chili sriracha pecans.'
 author: 'Jon'
 tags: ['astro', 'blogging', 'learning in public']
 ---
@@ -11,10 +11,16 @@ tags: ['astro', 'blogging', 'learning in public']
 
 Chili pepper simmer grapefruit jalapeño Thai basil curry hummus hot soba noodles thyme lemonade zest heat soy milk rich coconut cream basmati. Pine nuts red pepper chia seeds cilantro lime vinaigrette red grapes apricot cayenne dill green tea lime Thai super chili sriracha pecans blueberries coriander banh mi salad rolls hazelnut shiitake mediterranean vegetables cherry bomb mint salty blueberry pops delightful blueberry scones green grapes cashew mediterranean bento box parsley. Peanut butter crunch guacamole pinch of yum açai almonds peach strawberry mango seeds springtime strawberry blackberries almond milk chai latte with salad mushroom risotto creamy cauliflower alfredo cherry bomb pepper overflowing berries samosa kale roasted butternut squash cranberry spritzer chilies creamiest miso dressing ultimate chocolate peanut butter dip.
 
+Chili pepper simmer grapefruit jalapeño Thai basil curry hummus hot soba noodles thyme lemonade zest heat soy milk rich coconut cream basmati. Pine nuts red pepper chia seeds cilantro lime vinaigrette red grapes apricot cayenne dill green tea lime Thai super chili sriracha pecans blueberries coriander banh mi salad rolls hazelnut shiitake mediterranean vegetables cherry bomb mint salty blueberry pops delightful blueberry scones green grapes cashew mediterranean bento box parsley. Peanut butter crunch guacamole pinch of yum açai almonds peach strawberry mango seeds springtime strawberry blackberries almond milk chai latte with salad mushroom risotto creamy cauliflower alfredo cherry bomb pepper overflowing berries samosa kale roasted butternut squash cranberry spritzer chilies creamiest miso dressing ultimate chocolate peanut butter dip.
+
 <details>
 <summary>Read more</summary> 
 lorem ipsum etc etc 
 </details>
+
+```css
+font-family: monospace;
+```
 
 ## Smoky Maple Tempeh Glaze
 

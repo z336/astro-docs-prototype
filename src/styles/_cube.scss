@@ -1,11 +1,16 @@
 // Compositions
 
+@use './compositions/layout';
+
 // Utilities
 
+@use './utilities/flow';
+@use './utilities/region';
 @use './utilities/wrapper';
 
 // Blocks
 
 @use './blocks/header';
+@use './blocks/prose';
 
 // Exceptions

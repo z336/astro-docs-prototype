@@ -4,39 +4,37 @@ import TableOfContents from '../components/TableOfContents.astro';
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter, headings } = Astro.props;
 const articleTitle = frontmatter.title;
-const pubDate = frontmatter.pubDate;
+// const pubDate = frontmatter.pubDate;
 const description = frontmatter.description;
-const author = frontmatter.author;
+// const author = frontmatter.author;
 // const tags = frontmatter.tags;
 
-function dateFormatter(dateToFormat) {
-  const rawDate = new Date(dateToFormat);
-  const date = rawDate.toLocaleDateString('en-us', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
-  return date;
-}
+// function dateFormatter(dateToFormat) {
+//   const rawDate = new Date(dateToFormat);
+//   const date = rawDate.toLocaleDateString('en-us', {
+//     year: 'numeric',
+//     month: 'short',
+//     day: 'numeric',
+//   });
+//   return date;
+// }
 ---
 
 <BaseLayout pageTitle={articleTitle}>
-  <div class="wrapper | layout">
+  <div class="wrapper | region | layout">
     <aside class="sidebar">
       <nav class="sticky">
         <DocsMenu />
       </nav>
     </aside>
-    <aside class="sidebar-right">
+    <aside class="table-of-contents">
       <nav class="sticky">
         <TableOfContents headings={headings} />
       </nav>
     </aside>
-    <article class="content">
+    <article class="flow | prose | content">
       <h1>{articleTitle}</h1>
-      <p>{dateFormatter(pubDate)}</p>
-      <p><em>{description}</em></p>
-      <p>Written by: {author}</p>
+      <p>{description}</p>
       <slot />
     </article>
   </div>

@@ -11,6 +11,16 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="preload"
+      href="/fonts/FiraMono-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script>
+      // Firefox fouc bug fix, do not remove this empty script. See bug here: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
+    </script>
     <title>{pageTitle}</title>
   </head>
   <body>

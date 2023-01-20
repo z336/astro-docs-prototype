@@ -1,7 +1,17 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
 <details>
   <summary>Tutorial</summary>
   <ul>
-    <li><a href="/docs/tutorial/">Tutorial</a></li>
+    <li>
+      <a
+        href="/docs/tutorial/"
+        aria-current={`${currentPath === '/docs/tutorial/' ? 'page' : 'false'}`}
+        >Tutorial</a
+      >
+    </li>
   </ul>
 </details>
 <details>
@@ -25,6 +35,6 @@
 <details>
   <summary>Faq</summary>
   <ul>
-    <li><a href="/">sidebar</a></li>
+    <li><a href="/">sidebar long title this is a kinda long title</a></li>
   </ul>
 </details>
