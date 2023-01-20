@@ -1,0 +1,33 @@
+---
+import DocsMenu from '../components/DocsMenu.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter, headings } = Astro.props;
+const articleTitle = frontmatter.title;
+const pubDate = frontmatter.pubDate;
+const description = frontmatter.description;
+const author = frontmatter.author;
+const tags = frontmatter.tags;
+---
+
+<BaseLayout pageTitle={articleTitle}>
+  <div class="wrapper | layout">
+    <aside class="sidebar">
+      <nav>
+        <DocsMenu />
+      </nav>
+    </aside>
+    <aside class="table-of-contents">
+      <nav>
+        <TableOfContents />
+      </nav>
+    </aside>
+    <article class="content">
+      <h1>{articleTitle}</h1>
+      <p>{pubDate.slice(0, 10)}</p>
+      <p><em>{description}</em></p>
+      <p>Written by: {author}</p>
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import DocsMenu from '../components/DocsMenu.astro';
+import BaseLayout from './BaseLayout.astro';
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="wrapper | layout">
+    <aside class="sidebar">
+      <nav>
+        <DocsMenu />
+      </nav>
+    </aside>
+    <article class="content | page">
+      <h1>{pageTitle}</h1>
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

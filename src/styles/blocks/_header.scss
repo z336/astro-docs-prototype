@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--offset);
+  z-index: 2;
+  nav {
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
