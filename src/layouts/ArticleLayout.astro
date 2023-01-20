@@ -7,24 +7,34 @@ const articleTitle = frontmatter.title;
 const pubDate = frontmatter.pubDate;
 const description = frontmatter.description;
 const author = frontmatter.author;
-const tags = frontmatter.tags;
+// const tags = frontmatter.tags;
+
+function dateFormatter(dateToFormat) {
+  const rawDate = new Date(dateToFormat);
+  const date = rawDate.toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+  return date;
+}
 ---
 
 <BaseLayout pageTitle={articleTitle}>
   <div class="wrapper | layout">
     <aside class="sidebar">
-      <nav>
+      <nav class="sticky">
         <DocsMenu />
       </nav>
     </aside>
-    <aside class="table-of-contents">
-      <nav>
-        <TableOfContents />
+    <aside class="sidebar-right">
+      <nav class="sticky">
+        <TableOfContents headings={headings} />
       </nav>
     </aside>
     <article class="content">
       <h1>{articleTitle}</h1>
-      <p>{pubDate.slice(0, 10)}</p>
+      <p>{dateFormatter(pubDate)}</p>
       <p><em>{description}</em></p>
       <p>Written by: {author}</p>
       <slot />

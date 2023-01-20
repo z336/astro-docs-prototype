@@ -11,9 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.14.0",
     "@astrojs/preact": "^1.2.0",
     "astro": "^1.9.0",
-    "preact": "^10.11.3"
+    "hast-util-select": "^5.0.4",
+    "preact": "^10.11.3",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.1.0"
   },
   "devDependencies": {
     "sass": "^1.57.1"

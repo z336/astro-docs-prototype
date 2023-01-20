@@ -47,7 +47,7 @@ header {
   }
 }
 
-.table-of-contents {
+.sidebar-right {
   @media (min-width: 80rem) {
     grid-column: 3;
   }
@@ -55,6 +55,12 @@ header {
   //   grid-column: 2;
   // }
   background-color: hotpink;
+}
+
+.sticky {
+  position: sticky;
+  top: var(--offset);
+  overflow-y: auto;
 }
 
 footer {
