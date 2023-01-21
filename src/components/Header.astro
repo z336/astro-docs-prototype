@@ -1,13 +1,35 @@
 ---
-// import DocsMenu from './DocsMenu.astro';
+import DocsMenu from './DocsMenu.astro';
 import PageMenu from './PageMenu.astro';
 ---
 
 <header class="wrapper | region | header">
   <a href="/">Docs</a>
-  <nav class="navbar">
-    <!-- <DocsMenu /> -->
-    <PageMenu />
-    <p>Search</p>
+  <nav class="navbar" id="mainnav">
+    <div class="navbar-container">
+      <DocsMenu />
+      <PageMenu />
+      <input
+        class="search"
+        inputmode="search"
+        type="search"
+        name="q"
+        autocomplete="off"
+        placeholder="Search articles..."
+        aria-label="Search articles"
+      />
+    </div>
   </nav>
 </header>
+<template id="burger-template">
+  <button
+    type="button"
+    aria-expanded="false"
+    aria-label="Menu"
+    aria-controls="mainnav"
+  >
+    <svg width="24" height="24" aria-hidden="true">
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"> </path>
+    </svg>
+  </button>
+</template>
