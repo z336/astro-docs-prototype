@@ -68,7 +68,6 @@
     all: unset;
     display: var(--nav-button-display, flex);
     position: relative;
-    align-self: center;
     cursor: pointer;
     z-index: 1;
   }
