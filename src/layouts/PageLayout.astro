@@ -1,6 +1,6 @@
 ---
-import DocsMenu from '../components/DocsMenu.astro';
 import BaseLayout from './BaseLayout.astro';
+import DocsMenu from '../components/DocsMenu.astro';
 const { pageTitle } = Astro.props;
 ---
 
@@ -11,7 +11,7 @@ const { pageTitle } = Astro.props;
         <DocsMenu />
       </nav>
     </aside>
-    <article class="flow | content | page">
+    <article class="flow | prose | content | page">
       <h1>{pageTitle}</h1>
       <slot />
     </article>

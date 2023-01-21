@@ -19,7 +19,7 @@ const { pageTitle } = Astro.props;
       crossorigin
     />
     <script>
-      // Firefox fouc bug fix, do not remove this empty script. See bug here: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
+      // Empty script tag reduces Firefox FOUC bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
     </script>
     <title>{pageTitle}</title>
   </head>

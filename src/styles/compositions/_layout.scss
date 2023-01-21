@@ -36,6 +36,10 @@
   }
 
   .table-of-contents {
+    @media (max-width: 60rem) {
+      // Add the same padding as grid gap when there is no grid
+      padding-block-end: var(--gutter);
+    }
     @media (min-width: 80rem) {
       grid-column: 3;
     }
