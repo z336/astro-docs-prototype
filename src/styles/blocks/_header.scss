@@ -8,10 +8,16 @@
   --region-space-top: var(--space-s);
   --region-space-bottom: var(--space-s);
   background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gutter);
   nav {
+    display: flex;
+    gap: var(--gutter);
     ul {
       display: flex;
-      gap: 1rem;
+      gap: var(--gutter);
     }
   }
 }

@@ -1,5 +1,13 @@
 ---
-import Navigation from './Navigation.astro';
+// import DocsMenu from './DocsMenu.astro';
+import PageMenu from './PageMenu.astro';
 ---
 
-<header class="region | header"><Navigation /></header>
+<header class="wrapper | region | header">
+  <a href="/">Docs</a>
+  <nav class="navbar">
+    <!-- <DocsMenu /> -->
+    <PageMenu />
+    <p>Search</p>
+  </nav>
+</header>

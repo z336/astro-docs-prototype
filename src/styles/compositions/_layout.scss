@@ -47,7 +47,7 @@
 
   .sticky {
     position: sticky;
-    top: var(--offset);
+    top: calc(var(--offset) + var(--space-l));
     overflow-y: auto;
   }
 }

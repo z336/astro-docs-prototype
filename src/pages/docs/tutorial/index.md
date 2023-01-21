@@ -20,6 +20,13 @@ lorem ipsum etc etc
 
 ```css
 font-family: monospace;
+font-size: 16px;
+```
+
+```javascript
+function myFunction() {
+  console.log();
+}
 ```
 
 ## Smoky Maple Tempeh Glaze

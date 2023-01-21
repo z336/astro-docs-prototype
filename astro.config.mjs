@@ -25,6 +25,7 @@ export default defineConfig({
         },
       ],
     ],
+    syntaxHighlight: false,
     extendDefaultPlugins: true,
   },
   vite: {

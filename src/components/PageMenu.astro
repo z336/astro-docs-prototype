@@ -1,0 +1,25 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<ul role="list">
+  <li>
+    <a href="/" aria-current={`${currentPath === '/' ? 'page' : 'false'}`}
+      >Home</a
+    >
+  </li>
+  <li>
+    <a
+      href="/api/"
+      aria-current={`${currentPath === '/api/' ? 'page' : 'false'}`}
+      >Api Reference</a
+    >
+  </li>
+  <li>
+    <a
+      href="/contact/"
+      aria-current={`${currentPath === '/contact/' ? 'page' : 'false'}`}
+      >Need help?</a
+    >
+  </li>
+</ul>
