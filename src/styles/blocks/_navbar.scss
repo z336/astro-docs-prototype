@@ -1,0 +1,92 @@
+.navbar {
+  @media (min-width: 60rem) {
+    --nav-position: static;
+    --nav-button-display: none;
+
+    div {
+      --nav-container-position: static;
+      --nav-container-layout: row;
+      --nav-container-padding: 0;
+      --nav-container-height: auto;
+      --nav-container-width: 100%;
+      --nav-container-transform: none;
+      --nav-container-visibility: visible;
+    }
+
+    details {
+      --nav-details-display: none;
+    }
+
+    ul {
+      --nav-list-layout: row;
+    }
+  }
+
+  position: var(--nav-position, fixed);
+  gap: 1rem;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+
+  div {
+    display: flex;
+    gap: var(--gutter);
+    flex-direction: var(--nav-container-layout, column);
+    background: var(--color-light);
+    height: var(--nav-container-height, 100vh);
+    margin: 0;
+    padding: var(--nav-container-padding, 2rem);
+    position: var(--nav-container-position, fixed);
+    inset-block-start: 0; // Logical property. Equivalent to top: 0;
+    inset-inline-end: 0; // Logical property. Equivalent to right: 0;
+    width: var(--nav-container-width, min(22rem, 100vw));
+    visibility: var(--nav-container-visibility, visible);
+  }
+
+  details {
+    display: var(--nav-details-display, flex);
+    flex-wrap: wrap;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: var(--nav-list-layout, column);
+    flex-wrap: wrap;
+    gap: var(--gutter);
+  }
+
+  span {
+    padding-right: var(--space-2xs-xs);
+  }
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
+
+  // Reset button styling
+  button {
+    all: unset;
+    display: var(--nav-button-display, flex);
+    position: relative;
+    align-self: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    [aria-expanded='true'] + div,
+    svg {
+      transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+        visibility 0.3s linear;
+    }
+  }
+
+  [aria-expanded='true'] svg {
+    transform: var(--nav-list-rotate, rotate(45deg));
+  }
+
+  [aria-expanded='false'] + div {
+    transform: var(--nav-container-transform, translateX(100%));
+    visibility: var(--nav-container-visibility, hidden);
+  }
+}
