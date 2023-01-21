@@ -18,10 +18,10 @@ const { pageTitle } = Astro.props;
       type="font/ttf"
       crossorigin
     />
+    <title>{pageTitle}</title>
     <script>
       /* Empty script tag reduces Firefox FOUC bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468 */
     </script>
-    <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
