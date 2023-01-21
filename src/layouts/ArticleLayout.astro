@@ -21,21 +21,19 @@ const description = frontmatter.description;
 ---
 
 <BaseLayout pageTitle={articleTitle}>
-  <div class="wrapper | region | layout">
-    <aside class="sidebar">
-      <nav class="sticky">
-        <DocsMenu />
-      </nav>
-    </aside>
-    <aside class="table-of-contents">
-      <nav class="sticky">
-        <TableOfContents headings={headings} />
-      </nav>
-    </aside>
-    <article class="flow | prose | content">
-      <h1>{articleTitle}</h1>
-      <p>{description}</p>
-      <slot />
-    </article>
-  </div>
+  <aside class="sidebar">
+    <nav class="sticky">
+      <DocsMenu />
+    </nav>
+  </aside>
+  <aside class="table-of-contents">
+    <nav class="sticky">
+      <TableOfContents headings={headings} />
+    </nav>
+  </aside>
+  <article class="flow | prose | content">
+    <h1>{articleTitle}</h1>
+    <p>{description}</p>
+    <slot />
+  </article>
 </BaseLayout>
