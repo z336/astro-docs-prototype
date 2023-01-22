@@ -1,0 +1,10 @@
+.breadcrumbs {
+  font-size: var(--step--1);
+  li {
+    display: inline;
+  }
+  li + li:before {
+    padding-inline: var(--space-s);
+    content: '/\00a0';
+  }
+}

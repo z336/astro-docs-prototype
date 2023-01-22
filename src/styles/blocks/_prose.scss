@@ -12,3 +12,7 @@
 p + p {
   --flow-space: var(--space-s-m);
 }
+
+.prose :is(nav) + * {
+  --flow-space: var(--space-s-m);
+}

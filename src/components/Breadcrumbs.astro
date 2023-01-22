@@ -1,0 +1,23 @@
+---
+const { frontmatter, url } = Astro.props;
+const articleTitle = frontmatter.title;
+const breadcrumbs = frontmatter.parentSection;
+
+const showParentBreadcrumb = breadcrumbs === undefined || null ? false : true;
+---
+
+<ul role="list">
+  <li><a href="/">Home</a></li>
+  {
+    showParentBreadcrumb
+      ? breadcrumbs.map((section) => {
+          return (
+            <li>
+              <a href={section.url}>{section.title}</a>
+            </li>
+          );
+        })
+      : ''
+  }
+  <li><a href={url}>{articleTitle}</a></li>
+</ul>

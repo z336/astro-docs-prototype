@@ -3,23 +3,10 @@ import BaseLayout from './BaseLayout.astro';
 import DocsMenu from '../components/DocsMenu.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import Help from '../components/Help.astro';
-const { frontmatter, headings } = Astro.props;
+// import Breadcrumbs from '../components/Breadcrumbs.astro';
+const { frontmatter, headings, url } = Astro.props;
 const articleTitle = frontmatter.title;
-// const pubDate = frontmatter.pubDate;
 const description = frontmatter.description;
-// const author = frontmatter.author;
-// const tags = frontmatter.tags;
-
-// function dateFormatter(dateToFormat) {
-//   const rawDate = new Date(dateToFormat);
-//   const date = rawDate.toLocaleDateString('en-us', {
-//     year: 'numeric',
-//     month: 'short',
-//     day: 'numeric',
-//   });
-//   return date;
-// }
-console.log(Astro.url.pathname);
 ---
 
 <BaseLayout pageTitle={articleTitle}>
@@ -28,6 +15,9 @@ console.log(Astro.url.pathname);
       <DocsMenu />
     </nav>
   </aside>
+  <!-- <nav class="breadcrumbs">
+    <Breadcrumbs frontmatter={frontmatter} url={url} />
+  </nav> -->
   <aside class="table-of-contents">
     <nav class="sticky">
       <TableOfContents headings={headings} />
