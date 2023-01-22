@@ -63,7 +63,7 @@ details {
   }
   summary::before {
     display: inline-block;
-    width: 1.65em;
+    width: 2em;
     height: 0.85em;
     background-image: url('/chevron-right.svg');
     background-repeat: no-repeat;
@@ -73,7 +73,7 @@ details {
     content: '(details list marker)';
     overflow: hidden;
     white-space: nowrap;
-    text-indent: 1.65em; // the width of the icon
+    text-indent: 2em; // the width of the icon
   }
 
   &[open] {
