@@ -1,0 +1,8 @@
+---
+const { calloutClass, type } = Astro.props;
+---
+
+<aside class={calloutClass}>
+  <p><strong>{type}</strong></p>
+  <slot />
+</aside>

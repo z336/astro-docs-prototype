@@ -2,9 +2,9 @@
 const { headings } = Astro.props;
 ---
 
-<details>
+<details class="menu">
   <summary>On this page</summary>
-  <ul>
+  <ul role="list">
     {
       headings.map((heading) => {
         if (heading.depth === 2)
@@ -15,7 +15,7 @@ const { headings } = Astro.props;
           );
         if (heading.depth === 3)
           return (
-            <ul>
+            <ul role="list">
               <li>
                 <a href={`#${heading.slug}`}>{heading.text}</a>
               </li>

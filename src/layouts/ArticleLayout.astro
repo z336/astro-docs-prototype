@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import DocsMenu from '../components/DocsMenu.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import Help from '../components/Help.astro';
 const { frontmatter, headings } = Astro.props;
 const articleTitle = frontmatter.title;
 // const pubDate = frontmatter.pubDate;
@@ -21,7 +22,7 @@ const description = frontmatter.description;
 ---
 
 <BaseLayout pageTitle={articleTitle}>
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <nav class="sticky">
       <DocsMenu />
     </nav>
@@ -35,5 +36,6 @@ const description = frontmatter.description;
     <h1>{articleTitle}</h1>
     <p>{description}</p>
     <slot />
+    <Help />
   </article>
 </BaseLayout>

@@ -4,6 +4,12 @@
   figcaption {
     --flow-space: 0;
   }
+  // p,
+  // ul,
+  // ol,
+  // blockquote {
+  //   max-width: var(--measure);
+  // }
 }
 
 // Less flow space under headings and between multiple paragraphs

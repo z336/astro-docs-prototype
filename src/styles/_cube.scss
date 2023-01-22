@@ -1,5 +1,6 @@
 // Compositions
 
+@use './compositions/grid';
 @use './compositions/layout';
 
 // Utilities
@@ -10,9 +11,13 @@
 
 // Blocks
 
+@use './blocks/callout';
 @use './blocks/code';
+@use './blocks/heading-anchor';
+@use './blocks/menu';
 @use './blocks/header';
 @use './blocks/navbar';
 @use './blocks/prose';
+@use './blocks/skip-link';
 
 // Exceptions

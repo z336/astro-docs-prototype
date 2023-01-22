@@ -1,10 +1,10 @@
 ---
-const { summary, content } = Astro.props;
+const { summary } = Astro.props;
 ---
 
 <details>
   <summary>
     {summary}
   </summary>
-  {content}
+  <slot />
 </details>

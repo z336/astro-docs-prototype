@@ -79,3 +79,8 @@ table {
     background-color: var(--color-callout-yellow);
   }
 }
+
+hr {
+  border: none;
+  border-block-start: solid 0.1rem var(--color-grey-light);
+}

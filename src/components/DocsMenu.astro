@@ -2,14 +2,21 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<details>
+<details class="menu">
   <summary>Tutorial</summary>
-  <ul>
+  <ul role="list">
     <li>
       <a
         href="/docs/tutorial/"
         aria-current={`${currentPath === '/docs/tutorial/' ? 'page' : 'false'}`}
         >Tutorial</a
+      >
+    </li>
+    <li>
+      <a
+        href="/docs/mdx/"
+        aria-current={`${currentPath === '/docs/mdx/' ? 'page' : 'false'}`}
+        >Mdx</a
       >
     </li>
   </ul>

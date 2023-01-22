@@ -1,0 +1,36 @@
+.callout {
+  padding: var(--gutter);
+  border-radius: var(--border-radius);
+  > * + * {
+    margin-block-start: var(--space-3xs-2xs);
+  }
+}
+
+.callout.details {
+  padding: 0;
+  border-radius: 0;
+}
+
+.callout.note {
+  border-inline-start: solid var(--border-thick)
+    var(--color-callout-yellow-secondary);
+  background-color: var(--color-callout-yellow);
+}
+
+.callout.important {
+  border-inline-start: solid var(--border-thick)
+    var(--color-callout-cyan-secondary);
+  background-color: var(--color-callout-cyan);
+}
+
+.callout.warning {
+  border-inline-start: solid var(--border-thick)
+    var(--color-callout-red-secondary);
+  background-color: var(--color-callout-red);
+}
+
+.callout.new {
+  border-inline-start: solid var(--border-thick)
+    var(--color-callout-green-secondary);
+  background-color: var(--color-callout-green);
+}
