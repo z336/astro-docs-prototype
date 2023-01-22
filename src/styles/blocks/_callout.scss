@@ -1,6 +1,5 @@
 .callout {
-  padding-block: var(--space-xs-s);
-  padding-inline: var(--gutter);
+  padding: var(--gutter);
   border-radius: var(--border-radius);
   > * + * {
     margin-block-start: var(--space-3xs-2xs);

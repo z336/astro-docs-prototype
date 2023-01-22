@@ -2,8 +2,18 @@
   [aria-current='page'] {
     display: block;
     border-inline-start: solid var(--border-thin);
-    color: var(--color-dark);
     background-color: var(--color-grey-light);
     text-decoration: none;
+  }
+}
+
+.pages.current-page {
+  @media (min-width: 60rem) {
+    [aria-current='page'] {
+      border-inline-start: unset;
+      background-color: unset;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
   }
 }
