@@ -62,7 +62,7 @@ table {
   td,
   th {
     padding-block: var(--space-3xs-2xs);
-    padding-inline: var(--space-2xs-xs);
+    padding-inline: var(--gutter);
     border: var(--border-thin) solid var(--color-dark);
   }
 
@@ -86,6 +86,8 @@ hr {
 }
 
 footer {
+  --region-space-top: var(--space-l);
+  --region-space-bottom: var(--space-l);
   color: var(--color-light);
   background-color: var(--color-grey-dark);
 }
