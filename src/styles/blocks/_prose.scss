@@ -1,5 +1,5 @@
 .prose {
-  --wrapper-max-width: 60rem;
+  --wrapper-max-width: var(--measure);
   --flow-space: var(--space-l-xl);
   figcaption {
     --flow-space: 0;

@@ -40,6 +40,7 @@
     inset-inline-end: 0; // Logical property. Equivalent to right: 0;
     width: var(--nav-container-width, min(22rem, 100vw));
     visibility: var(--nav-container-visibility, visible);
+    overflow-y: auto;
   }
 
   details {

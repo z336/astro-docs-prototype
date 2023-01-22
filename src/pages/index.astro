@@ -1,10 +1,19 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import docs from '../data/docs.yaml';
+import Search from '../components/Search.astro';
 const pageTitle = 'Home';
 ---
 
 <PageLayout pageTitle={pageTitle}>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit aliquid
+    commodi facilis necessitatibus in magni, odio ipsa sint debitis odit ducimus
+    possimus, impedit nostrum, doloribus corrupti quisquam aspernatur quos
+    inventore.
+  </p>
+  <Search />
+  <hr />
   <ul class="grid | docs" role="list">
     {
       docs.map((section) => {
