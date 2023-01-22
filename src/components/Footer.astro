@@ -1,9 +1,57 @@
+---
+const currentPath = Astro.url.pathname;
+import docs from '../data/docs.yaml';
+import pages from '../data/pages.yaml';
+---
+
 <footer class="region">
-  <nav class="wrapper">
+  <nav class="wrapper | region | grid | docs">
     <ul role="list">
-      <li><a href="/">Links</a></li>
-      <li><a href="/">Links</a></li>
-      <li><a href="/">Links</a></li>
+      <li>
+        <h2>Docs</h2>
+        <ul role="list">
+          {
+            docs.map((section) => {
+              return (
+                <li>
+                  <a
+                    href={section.url}
+                    aria-current={`${
+                      currentPath === `${section.url}` ? 'page' : 'false'
+                    }`}
+                  >
+                    {section.title}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </li>
     </ul>
+    <ul role="list">
+      <li>
+        <h2>Resources</h2>
+        <ul role="list">
+          {
+            pages.map((page) => {
+              return (
+                <li>
+                  <a
+                    href={page.url}
+                    aria-current={`${
+                      currentPath === `${page.url}` ? 'page' : 'false'
+                    }`}
+                  >
+                    {page.title}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </li>
+    </ul>
+    <p>&copy; {new Date().getFullYear()}</p>
   </nav>
 </footer>
