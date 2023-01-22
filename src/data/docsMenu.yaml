@@ -6,35 +6,35 @@
 #   - title: Need help?
 #     url: /contact/
 # docs:
-sections:
-  - title: Tutorial
-    url: /docs/tutorial/
-    articles:
-      - title: A Tutorial
-        url: /docs/tutorial/a-tutorial/
-      - title: A Second Tutorial
-        url: /docs/tutorial/a-second-tutorial/
-  - title: How-to
-    url: /docs/how-to/
-    articles:
-      - title: A How-to
-        url: /docs/how-to/a-how-to/
-      - title: An Additional How-to
-        url: /docs/how-to/an-additional-how-to/
-  - title: Explanation
-    url: /docs/explanation/
-    articles:
-      - title: An Explanation
-        url: /docs/explanation/an-explanation/
-      - title: Another Explanation
-        url: /docs/explanation/another-explanation/
-  - title: Reference
-    url: /docs/reference/
-    articles:
-      - title: Another Reference
-        url: /docs/reference/another-reference/
-  - title: FAQ
-    url: /docs/faq/
-    articles:
-      - title: Another FAQ
-        url: /docs/faq/additional-faq/
+# sections:
+- title: Tutorial
+  url: /docs/tutorial/
+  articles:
+    - title: A Tutorial
+      url: /docs/tutorial/a-tutorial/
+    - title: A Second Tutorial
+      url: /docs/tutorial/a-second-tutorial/
+- title: How-to
+  url: /docs/how-to/
+  articles:
+    - title: A How-to
+      url: /docs/how-to/a-how-to/
+    - title: An Additional How-to
+      url: /docs/how-to/an-additional-how-to/
+- title: Explanation
+  url: /docs/explanation/
+  articles:
+    - title: An Explanation
+      url: /docs/explanation/an-explanation/
+    - title: Another Explanation
+      url: /docs/explanation/another-explanation/
+- title: Reference
+  url: /docs/reference/
+  articles:
+    - title: Another Reference
+      url: /docs/reference/another-reference/
+- title: FAQ
+  url: /docs/faq/
+  articles:
+    - title: Another FAQ
+      url: /docs/faq/additional-faq/

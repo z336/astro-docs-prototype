@@ -1,8 +1,35 @@
 ---
 const currentPath = Astro.url.pathname;
+import sections from '../data/docsMenu.yaml';
 ---
 
-<details class="menu">
+{
+  sections.map((section) => {
+    return (
+      <details class="menu">
+        <summary>{section.title}</summary>
+        <ul role="list">
+          {section.articles.map((article) => {
+            return (
+              <li>
+                <a
+                  href={article.url}
+                  aria-current={`${
+                    currentPath === `${article.url}` ? 'page' : 'false'
+                  }`}
+                >
+                  {article.title}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </details>
+    );
+  })
+}
+
+<!-- <details class="menu">
   <summary>Tutorial</summary>
   <ul role="list">
     <li>
@@ -44,4 +71,4 @@ const currentPath = Astro.url.pathname;
   <ul>
     <li><a href="/">sidebar long title this is a kinda long title</a></li>
   </ul>
-</details>
+</details> -->
