@@ -1,32 +1,4 @@
 .menu {
-  summary {
-    list-style: none;
-    font-weight: bold;
-  }
-  summary::-webkit-details-marker {
-    display: none;
-  }
-  summary::before {
-    display: inline-block;
-    width: 1.65em;
-    height: 0.85em;
-    background-image: url('/plus.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% auto;
-    // alternative text rules
-    content: '(details list marker)';
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 1.65em; // the width of the icon
-  }
-
-  &[open] {
-    summary::before {
-      background-image: url('/minus.svg');
-    }
-  }
-
   ul {
     li {
       a {
