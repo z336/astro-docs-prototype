@@ -14,4 +14,8 @@
   a {
     text-decoration: none;
   }
+  a:is(:hover, :focus) {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
 }

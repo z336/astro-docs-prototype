@@ -21,7 +21,9 @@
 .pages {
   @media (max-width: 60rem) {
     li {
-      padding-inline-start: calc(var(--space-m) + 0.2em);
+      a {
+        padding-inline-start: calc(var(--space-m) + 0.5em);
+      }
     }
   }
 }
