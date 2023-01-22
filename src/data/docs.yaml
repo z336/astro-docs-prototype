@@ -1,12 +1,3 @@
-# pages:
-#   - title: Home
-#     url: /
-#   - title: API Reference
-#     url: /api/
-#   - title: Need help?
-#     url: /contact/
-# docs:
-# sections:
 - title: Tutorial
   url: /docs/tutorial/
   articles:
@@ -36,5 +27,5 @@
 - title: FAQ
   url: /docs/faq/
   articles:
-    - title: Another FAQ
+    - title: Addtional FAQ
       url: /docs/faq/additional-faq/

@@ -1,14 +1,24 @@
 ---
 const currentPath = Astro.url.pathname;
-import sections from '../data/docsMenu.yaml';
+import docs from '../data/docs.yaml';
 ---
 
 {
-  sections.map((section) => {
+  docs.map((section) => {
     return (
       <details class="menu">
         <summary>{section.title}</summary>
         <ul role="list">
+          <li>
+            <a
+              href={section.url}
+              aria-current={`${
+                currentPath === `${section.url}` ? 'page' : 'false'
+              }`}
+            >
+              {section.title}
+            </a>
+          </li>
           {section.articles.map((article) => {
             return (
               <li>
@@ -28,47 +38,3 @@ import sections from '../data/docsMenu.yaml';
     );
   })
 }
-
-<!-- <details class="menu">
-  <summary>Tutorial</summary>
-  <ul role="list">
-    <li>
-      <a
-        href="/docs/tutorial/"
-        aria-current={`${currentPath === '/docs/tutorial/' ? 'page' : 'false'}`}
-        >Tutorial</a
-      >
-    </li>
-    <li>
-      <a
-        href="/docs/mdx/"
-        aria-current={`${currentPath === '/docs/mdx/' ? 'page' : 'false'}`}
-        >Mdx</a
-      >
-    </li>
-  </ul>
-</details>
-<details>
-  <summary>How-to</summary>
-  <ul>
-    <li><a href="/">sidebar</a></li>
-  </ul>
-</details>
-<details>
-  <summary>Explanation</summary>
-  <ul>
-    <li><a href="/">sidebar</a></li>
-  </ul>
-</details>
-<details>
-  <summary>Reference</summary>
-  <ul>
-    <li><a href="/">sidebar</a></li>
-  </ul>
-</details>
-<details>
-  <summary>Faq</summary>
-  <ul>
-    <li><a href="/">sidebar long title this is a kinda long title</a></li>
-  </ul>
-</details> -->
