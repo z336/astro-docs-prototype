@@ -28,6 +28,10 @@
   }
 
   ul {
-    padding-inline-start: calc(var(--space-m) + 0.2em);
+    li {
+      a {
+        padding-inline-start: calc(var(--space-m) + 0.2em);
+      }
+    }
   }
 }

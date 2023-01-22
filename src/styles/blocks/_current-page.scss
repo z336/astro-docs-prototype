@@ -1,0 +1,9 @@
+.current-page {
+  [aria-current='page'] {
+    display: block;
+    border-inline-start: solid var(--border-thin);
+    color: var(--color-dark);
+    background-color: var(--color-grey-light);
+    text-decoration: none;
+  }
+}
