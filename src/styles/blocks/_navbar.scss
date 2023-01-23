@@ -100,7 +100,7 @@
   }
 
   [aria-expanded='true'] svg {
-    transform: var(--nav-list-rotate, rotate(45deg));
+    transform: rotate(45deg);
   }
 
   [aria-expanded='false'] + div {
