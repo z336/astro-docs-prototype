@@ -48,6 +48,23 @@ a:is(:hover, :focus) {
   text-underline-offset: 0.35rem;
 }
 
+a:not([href*='astro-docs-prototype.com/']):not([href^='#']):not(
+    [href^='/']
+  ):after {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  background-image: url('/external-link.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% auto;
+  /* alternative text rules */
+  content: '(external link)';
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 1.25em; /* the width of the icon */
+}
+
 button {
   cursor: pointer;
 }

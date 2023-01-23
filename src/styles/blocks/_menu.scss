@@ -1,6 +1,9 @@
 .menu {
   --flow-space: var(--space-3xs-2xs);
   padding-block-end: var(--space-3xs-2xs);
+}
+
+.menu.left {
   ul {
     li {
       a {
@@ -12,6 +15,19 @@
         a {
           padding-inline-start: var(--space-xl);
         }
+      }
+    }
+  }
+}
+
+.menu.right {
+  ul {
+    li {
+      padding-inline-start: calc(var(--space-m) + 0.55em);
+    }
+    ul {
+      li {
+        padding-inline-start: var(--space-xl);
       }
     }
   }
