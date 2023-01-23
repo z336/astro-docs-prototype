@@ -10,6 +10,8 @@
       --nav-container-padding: 0;
       --nav-container-height: auto;
       --nav-container-width: 100%;
+      --nav-containter-border-start: 0;
+      --nav-containter-border-end: 0;
       --nav-container-transform: none;
       --nav-container-visibility: visible;
     }
@@ -33,13 +35,23 @@
     gap: var(--gutter);
     flex-direction: var(--nav-container-layout, column);
     background: var(--color-light);
-    box-shadow: var(--nav-container-shadow, -5px 0 11px 0 rgb(0 0 0 / 0.2));
-    height: var(--nav-container-height, calc(100vh - var(--offset)));
-    width: var(--nav-container-width, min(22rem, 100vw));
+    box-shadow: var(--nav-container-shadow, 1px 10px 20px 0px rgb(0 0 0 / 0.2));
+    height: var(--nav-container-height, 75vh);
+    width: var(--nav-container-width, 100vw);
     margin: 0;
     padding: var(--nav-container-padding, 2rem);
+    border-block-start: var(
+      --nav-containter-border-start solid var(--color-grey-light)
+        var(--border-thin)
+    );
+    border-block-end: var(
+      --nav-containter-border-end solid var(--color-grey-light)
+        var(--border-thin)
+    );
     position: var(--nav-container-position, fixed);
-    inset-block-start: var(--offset);
+    inset-block-start: var(
+      --offset
+    ); // Logical property. Equivalent to right: var(--offset);
     inset-inline-end: 0; // Logical property. Equivalent to right: 0;
     visibility: var(--nav-container-visibility, visible);
     overflow-y: auto;
