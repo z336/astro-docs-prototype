@@ -36,7 +36,12 @@ h3,
 h4,
 h5,
 h6 {
-  scroll-margin-block-start: calc(var(--offset) + var(--space-l));
+  @media (min-width: 60rem) {
+    // Visually line up with menus on desktop
+    scroll-margin-block-start: calc(var(--offset) + var(--space-l));
+  }
+  // Otherwise scroll farther
+  scroll-margin-block-start: var(--offset);
 }
 
 a {
