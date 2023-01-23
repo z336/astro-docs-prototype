@@ -1,12 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import DocsMenu from '../components/DocsMenu.astro';
-import TableOfContents from '../components/TableOfContents.astro';
 import Help from '../components/Help.astro';
-// import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 const { frontmatter, headings, url } = Astro.props;
 const articleTitle = frontmatter.title;
-const description = frontmatter.description;
+const overview = frontmatter.overview;
 ---
 
 <BaseLayout pageTitle={articleTitle}>
@@ -15,17 +15,17 @@ const description = frontmatter.description;
       <DocsMenu />
     </nav>
   </aside>
-  <!-- <nav class="breadcrumbs">
-    <Breadcrumbs frontmatter={frontmatter} url={url} />
-  </nav> -->
   <aside class="table-of-contents">
     <nav class="sticky">
       <TableOfContents headings={headings} />
     </nav>
   </aside>
   <article class="flow | prose | content">
+    <nav class="breadcrumbs">
+      <Breadcrumbs frontmatter={frontmatter} url={url} />
+    </nav>
     <h1>{articleTitle}</h1>
-    <p>{description}</p>
+    <p class="overview">{overview}</p>
     <slot />
     <Help />
   </article>

@@ -3,10 +3,9 @@
     font-size: var(--step-1);
   }
   ul {
-    padding: 0;
-    ul {
-      padding-inline: 0;
-      padding-block: var(--space-3xs-2xs);
+    padding-inline: 0;
+    padding-block: var(--space-3xs-2xs);
+    li {
       --flow-space: var(--space-3xs-2xs);
     }
   }

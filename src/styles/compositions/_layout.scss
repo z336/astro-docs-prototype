@@ -21,6 +21,16 @@
     }
   }
 
+  .table-of-contents {
+    @media (max-width: 60rem) {
+      // Add the same padding as grid gap when there is no grid
+      padding-block-end: var(--gutter);
+    }
+    @media (min-width: 80rem) {
+      grid-column: 3;
+    }
+  }
+
   .content {
     min-height: calc(100vh - var(--offset));
     @media (min-width: 60rem) {
@@ -35,16 +45,6 @@
     @media (min-width: 80rem) {
       grid-column: 2 / span 3;
       max-width: 90ch;
-    }
-  }
-
-  .table-of-contents {
-    @media (max-width: 60rem) {
-      // Add the same padding as grid gap when there is no grid
-      padding-block-end: var(--gutter);
-    }
-    @media (min-width: 80rem) {
-      grid-column: 3;
     }
   }
 

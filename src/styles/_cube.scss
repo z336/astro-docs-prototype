@@ -16,10 +16,11 @@
 @use './blocks/code';
 @use './blocks/current-page';
 @use './blocks/docs';
+@use './blocks/header';
 @use './blocks/heading-anchor';
 @use './blocks/menu';
-@use './blocks/header';
 @use './blocks/navbar';
+@use './blocks/overview';
 @use './blocks/prose';
 @use './blocks/skip-link';
 
