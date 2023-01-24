@@ -21,6 +21,9 @@ const pageTitle = 'Home';
           <li>
             <h2>{section.title}</h2>
             <ul class="flow" role="list">
+              <li>
+                <a href={section.url}>{section.title}</a>
+              </li>
               {section.articles.map((article) => {
                 return (
                   <li>
