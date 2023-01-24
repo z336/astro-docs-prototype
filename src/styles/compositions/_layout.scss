@@ -4,7 +4,7 @@
 
   @media (min-width: 60rem) {
     display: grid;
-    gap: var(--space-xl);
+    gap: 0 var(--space-xl);
     grid-template-columns: 18rem 1fr;
   }
   @media (min-width: 80rem) {
@@ -22,6 +22,10 @@
   }
 
   .table-of-contents {
+    @media (min-width: 60rem) {
+      grid-column: 2;
+      grid-row: 1;
+    }
     @media (min-width: 80rem) {
       grid-column: 3;
     }
@@ -31,6 +35,7 @@
     min-height: calc(100vh - var(--offset));
     @media (min-width: 60rem) {
       grid-column: 2;
+      grid-row: 2;
     }
     @media (min-width: 80rem) {
       grid-row: 1;
@@ -47,6 +52,7 @@
   .sticky {
     position: sticky;
     top: calc(var(--offset) + var(--space-l));
+    max-height: calc(100vh - var(--offset) + var(--space-l));
     overflow-y: auto;
   }
 }
