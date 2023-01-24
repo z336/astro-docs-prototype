@@ -2,9 +2,13 @@
 const { summary } = Astro.props;
 ---
 
-<details>
-  <summary>
-    {summary}
-  </summary>
-  <slot />
-</details>
+<aside class="read-more">
+  <details>
+    <summary>
+      {summary}
+    </summary>
+    <div>
+      <slot />
+    </div>
+  </details>
+</aside>
