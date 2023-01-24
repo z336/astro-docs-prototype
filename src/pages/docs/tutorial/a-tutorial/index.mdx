@@ -13,8 +13,17 @@ parentSection:
     url: /docs/tutorial/
 ---
 
+import vegetableInfograph from './vegetable-infograph.jpg';
+
 import ReadMore from '../../../../components/ReadMore.astro';
 import Callout from '../../../../components/Callout.astro';
+import Picture from '../../../../components/Image.astro';
+
+<Picture
+  src={vegetableInfograph}
+  alt="An infograph about food waste"
+  caption="This is the caption of the image"
+/>
 
 <ReadMore summary="Read more">
   Cremini mushrooms kung pao pepper paprika banana bread Bolivian rainbow pepper

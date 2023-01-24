@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import addClasses from './add-classes.mjs';
+import image from '@astrojs/image';
 import preact from '@astrojs/preact';
 import mdx from '@astrojs/mdx';
 import rehypeSlug from 'rehype-slug';
@@ -8,7 +9,11 @@ import yaml from '@rollup/plugin-yaml';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), mdx()],
+  integrations: [
+    preact(),
+    mdx(),
+    image({ serviceEntryPoint: '@astrojs/image/sharp' }),
+  ],
   markdown: {
     rehypePlugins: [
       rehypeSlug,
