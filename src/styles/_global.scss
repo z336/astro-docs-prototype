@@ -75,8 +75,8 @@ button {
 }
 
 details {
-  cursor: pointer;
   summary {
+    cursor: pointer;
     list-style: none;
     font-weight: bold;
   }
@@ -138,5 +138,11 @@ hr {
 footer {
   --region-space-top: var(--space-l);
   --region-space-bottom: var(--space-l);
+  --wrapper-max-width: 60rem;
+  font-size: var(--step--1);
   background-color: var(--color-grey-light);
+}
+
+img {
+  border-radius: var(--border-radius);
 }

@@ -1,5 +1,5 @@
 ---
-layout: ../../../../layouts/ArticleLayout.astro
+layout: ../../../../../layouts/ArticleLayout.astro
 title: A Tutorial
 pubDate: 2022-07-15
 overview: The overview is a brief explanation of what to expect in the article. By storing it in the frontmatter we can access it for previews in search.
@@ -15,9 +15,9 @@ parentSection:
 
 import vegetableInfograph from './vegetable-infograph.jpg';
 
-import ReadMore from '../../../../components/ReadMore.astro';
-import Callout from '../../../../components/Callout.astro';
-import Picture from '../../../../components/Image.astro';
+import ReadMore from '../../../../../components/ReadMore.astro';
+import Callout from '../../../../../components/Callout.astro';
+import Picture from '../../../../../components/Image.astro';
 
 <Picture
   src={vegetableInfograph}
@@ -78,6 +78,11 @@ function Test() {
 | Oranges | 1.99     | 52         |
 | Grapes  | 1.99     | 34         |
 | Mangos  | 2.89     | 23         |
+
+| Header1 | Header2 | Header3 |
+| ------- | ------- | ------- |
+| data1   | data2   | data3   |
+| data11  | data12  | data13  |
 
 ## Smoky Maple Tempeh Glaze
 

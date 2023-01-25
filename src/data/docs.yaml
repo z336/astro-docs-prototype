@@ -1,31 +1,31 @@
 - title: Tutorial
-  url: /docs/tutorial/
+  url: /docs/en/tutorial/
   articles:
     - title: A Tutorial
-      url: /docs/tutorial/a-tutorial/
+      url: /docs/en/tutorial/a-tutorial/
     - title: A Second Tutorial
-      url: /docs/tutorial/a-second-tutorial/
+      url: /docs/en/tutorial/a-second-tutorial/
 - title: How-to
-  url: /docs/how-to/
+  url: /docs/en/how-to/
   articles:
     - title: A How-to
-      url: /docs/how-to/a-how-to/
+      url: /docs/en/how-to/a-how-to/
     - title: An Additional How-to
-      url: /docs/how-to/an-additional-how-to/
+      url: /docs/en/how-to/an-additional-how-to/
 - title: Explanation
-  url: /docs/explanation/
+  url: /docs/en/explanation/
   articles:
     - title: An Explanation
-      url: /docs/explanation/an-explanation/
+      url: /docs/en/explanation/an-explanation/
     - title: Another Explanation
-      url: /docs/explanation/another-explanation/
+      url: /docs/en/explanation/another-explanation/
 - title: Reference
-  url: /docs/reference/
+  url: /docs/en/reference/
   articles:
     - title: Another Reference
-      url: /docs/reference/another-reference/
+      url: /docs/en/reference/another-reference/
 - title: FAQ
-  url: /docs/faq/
+  url: /docs/en/faq/
   articles:
     - title: Addtional FAQ
-      url: /docs/faq/additional-faq/
+      url: /docs/en/faq/additional-faq/

@@ -4,11 +4,11 @@
 
   @media (min-width: 60rem) {
     display: grid;
-    gap: 0 var(--space-xl);
-    grid-template-columns: 18rem 1fr;
+    gap: 0 var(--gutter);
+    grid-template-columns: 18rem 2fr;
   }
   @media (min-width: 80rem) {
-    grid-template-columns: 18rem 1fr 18rem;
+    grid-template-columns: 18rem 2fr 1fr;
   }
 
   .sidebar {
@@ -22,6 +22,7 @@
   }
 
   .table-of-contents {
+    font-size: var(--step--1);
     @media (min-width: 60rem) {
       grid-column: 2;
       grid-row: 1;
