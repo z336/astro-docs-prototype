@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   left: 0;
@@ -7,10 +10,8 @@
   z-index: 2;
   --region-space-top: var(--space-s);
   --region-space-bottom: var(--space-s);
+  border-block-end: var(--color-grey-light) solid var(--border-thin);
   background-color: var(--color-light);
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
   a {
     text-decoration: none;
   }

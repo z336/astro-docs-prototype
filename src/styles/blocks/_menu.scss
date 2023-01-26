@@ -1,14 +1,21 @@
 .menu {
   --flow-space: var(--space-3xs-2xs);
-  // Small adjustment for focus visibility
-  padding: 0.125rem;
+  padding-block-end: var(--space-2xs-xs);
+  @media (min-width: 60rem) {
+    summary {
+      padding-block-end: var(--space-3xs-2xs);
+    }
+  }
 }
 
 .menu.left {
   ul {
     li {
       a {
-        padding-inline-start: calc(var(--space-m) + 0.55em);
+        padding-inline-start: calc(var(--space-m) + 0.25em);
+        @media (max-width: 60rem) {
+          padding-inline-start: calc(var(--space-m) + 0.55em);
+        }
       }
       a:is(:focus) {
         display: block;
@@ -27,11 +34,11 @@
 .menu.right {
   ul {
     li {
-      padding-inline-start: calc(var(--space-m) + 0.55em);
+      padding-inline-start: calc(var(--space-m) + 0.25em);
     }
     ul {
       li {
-        padding-inline-start: var(--space-xl);
+        padding-inline-start: var(--space-l-xl);
       }
     }
   }

@@ -20,6 +20,10 @@
     @media (max-width: 60rem) {
       display: none;
     }
+    nav {
+      // Small adjustment for focus visibility
+      padding: 0.125rem;
+    }
   }
 
   .table-of-contents {
@@ -30,6 +34,13 @@
     }
     @media (min-width: 80rem) {
       grid-column: 3;
+      nav {
+        border-inline-start: var(--color-grey-light) solid var(--border-thin);
+      }
+    }
+    nav {
+      // Small adjustment for focus visibility
+      padding: 0.125rem;
     }
   }
 
