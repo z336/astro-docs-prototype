@@ -13,6 +13,7 @@
 
   .sidebar {
     @media (min-width: 60rem) {
+      font-size: var(--step--1);
       grid-column: 1;
       grid-row: 1 / span 2;
     }
