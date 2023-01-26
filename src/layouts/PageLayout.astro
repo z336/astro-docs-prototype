@@ -11,7 +11,7 @@ const { pageTitle } = Astro.props;
     </nav>
   </aside>
   <article class="flow | prose | content | page">
-    <h1>{pageTitle}</h1>
+    <h1 id="content">{pageTitle}</h1>
     <slot />
   </article>
 </BaseLayout>

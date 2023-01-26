@@ -32,7 +32,7 @@ const showTableOfContents = headings.length == 0 ? false : true;
     <nav class="breadcrumbs">
       <Breadcrumbs frontmatter={frontmatter} url={url} />
     </nav>
-    <h1>{articleTitle}</h1>
+    <h1 id="content">{articleTitle}</h1>
     <p>{overview}</p>
     <slot />
     <Help />

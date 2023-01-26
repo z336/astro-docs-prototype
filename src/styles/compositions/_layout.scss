@@ -1,6 +1,6 @@
 .layout {
   // Provide a visual cue that focus is on main content
-  scroll-margin-block-start: calc(var(--offset) - var(--space-l));
+  // scroll-margin-block-start: calc(var(--offset) - var(--space-l));
 
   @media (min-width: 60rem) {
     display: grid;

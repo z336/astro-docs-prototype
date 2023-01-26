@@ -1,7 +1,20 @@
 ---
 import Navigation from './Navigation.astro';
+
+const showSkipToTableOfContents = Astro.url.pathname.includes('docs')
+  ? true
+  : false;
 ---
 
+{
+  showSkipToTableOfContents ? (
+    <a href="#table-of-contents" class="skip-link">
+      Skip to table of contents
+    </a>
+  ) : (
+    ''
+  )
+}
 <a href="#content" class="skip-link">Skip to content</a>
 
 <header class="wrapper | region | header">
