@@ -2,7 +2,6 @@
   [aria-current='page'] {
     display: block;
     border-inline-start: solid var(--border-thin);
-    // border-radius: var(--border-radius);
     background-color: var(--color-grey-light);
     text-decoration: none;
   }
@@ -11,8 +10,8 @@
 .pages.current-page {
   @media (min-width: 60rem) {
     [aria-current='page'] {
+      display: inline;
       border-inline-start: unset;
-      // border-radius: unset;
       background-color: unset;
       text-decoration: underline;
       text-underline-offset: 0.5rem;

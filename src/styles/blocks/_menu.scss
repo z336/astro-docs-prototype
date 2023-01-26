@@ -1,6 +1,7 @@
 .menu {
   --flow-space: var(--space-3xs-2xs);
-  padding-block-end: var(--space-3xs-2xs);
+  // Small adjustment for focus visibility
+  padding: 0.125rem;
 }
 
 .menu.left {
@@ -8,6 +9,9 @@
     li {
       a {
         padding-inline-start: calc(var(--space-m) + 0.55em);
+      }
+      a:is(:focus) {
+        display: block;
       }
     }
     ul {
