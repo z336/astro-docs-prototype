@@ -7,6 +7,8 @@ import TableOfContents from '../components/TableOfContents.astro';
 const { frontmatter, headings, url } = Astro.props;
 const articleTitle = frontmatter.title;
 const overview = frontmatter.overview;
+
+const showTableOfContents = headings.length == 0 ? false : true;
 ---
 
 <BaseLayout pageTitle={articleTitle}>
@@ -15,11 +17,17 @@ const overview = frontmatter.overview;
       <DocsMenu />
     </nav>
   </aside>
-  <aside class="table-of-contents">
-    <nav class="sticky">
-      <TableOfContents headings={headings} />
-    </nav>
-  </aside>
+  {
+    showTableOfContents ? (
+      <aside class="table-of-contents">
+        <nav class="sticky">
+          <TableOfContents headings={headings} />
+        </nav>
+      </aside>
+    ) : (
+      ''
+    )
+  }
   <article class="flow | prose | content">
     <nav class="breadcrumbs">
       <Breadcrumbs frontmatter={frontmatter} url={url} />
