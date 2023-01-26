@@ -12,7 +12,7 @@
   ul {
     li {
       a {
-        padding-inline-start: calc(var(--space-m) + 0.25em);
+        padding-inline-start: calc(var(--space-m) + 0.77em);
         @media (max-width: 60rem) {
           padding-inline-start: calc(var(--space-m) + 0.55em);
         }

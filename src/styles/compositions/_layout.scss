@@ -4,7 +4,7 @@
 
   @media (min-width: 60rem) {
     display: grid;
-    gap: 0 var(--gutter);
+    gap: 0 var(--space-3xs-xl);
     grid-template-columns: 18rem 2fr;
   }
   @media (min-width: 80rem) {
@@ -23,6 +23,9 @@
     nav {
       // Small adjustment for focus visibility
       padding: 0.125rem;
+    }
+    summary {
+      font-size: var(--step-0);
     }
   }
 

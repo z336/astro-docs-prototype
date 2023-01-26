@@ -67,4 +67,6 @@
   // Custom pairs
   --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
   --space-l-2xl: clamp(2.25rem, calc(1.29rem + 4.78vw), 5rem);
+  --space-xs-2xl: clamp(0.88rem, calc(-0.56rem + 7.17vw), 5rem);
+  --space-3xs-xl: clamp(0.31rem, calc(-0.88rem + 5.98vw), 3.75rem);
 }
