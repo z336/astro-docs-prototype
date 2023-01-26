@@ -5,6 +5,7 @@ const { headings } = Astro.props;
 <details class="menu | right" id="table-of-contents" open="">
   <summary>On this page</summary>
   <ul class="flow" role="list">
+    <li><a href="#overview">Overview</a></li>
     {
       headings.map((heading) => {
         if (heading.depth === 2)

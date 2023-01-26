@@ -48,6 +48,10 @@ h6 {
   scroll-margin-block-start: calc(var(--offset) - var(--space-l));
 }
 
+#overview {
+  scroll-margin-block-start: calc(100vh - var(--offset));
+}
+
 a {
   color: currentColor;
   text-decoration: underline 0.1rem;
