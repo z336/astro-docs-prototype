@@ -3,14 +3,16 @@ import { Picture } from '@astrojs/image/components';
 
 const { src, caption, ...attrs } = Astro.props;
 
+console.log(Astro.props);
+
 const showCaption = caption === undefined || null ? false : true;
 ---
 
 <figure>
   <Picture
     src={src}
-    widths={[300, 600, 900, 1200]}
-    sizes="(max-width: 1000px) 100vw, 1000px"
+    widths={[300, 600, 900]}
+    sizes="(max-width: 900px) 100vw, 900px"
     {...attrs}
   />
   {showCaption ? <figcaption>{caption}</figcaption> : ''}
