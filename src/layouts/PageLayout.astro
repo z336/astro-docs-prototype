@@ -10,8 +10,8 @@ const { pageTitle } = Astro.props;
       <DocsMenu />
     </nav>
   </aside>
-  <article class="flow | prose | content | page">
-    <h1 id="content">{pageTitle}</h1>
+  <article class="flow | prose | content | page" id="content">
+    <h1>{pageTitle}</h1>
     <slot />
   </article>
 </BaseLayout>

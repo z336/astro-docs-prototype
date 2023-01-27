@@ -30,7 +30,6 @@ h6 {
   font-size: var(--step--2);
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -40,12 +39,13 @@ h6 {
     // Visually line up with menus on desktop
     scroll-margin-block-start: calc(var(--offset) + var(--space-l));
   }
-  // Otherwise scroll farther
-  scroll-margin-block-start: var(--offset);
+  // Otherwise scroll less
+  scroll-margin-block-start: calc(var(--offset) + var(--space-s));
 }
 
+#content,
 #table-of-contents {
-  scroll-margin-block-start: calc(var(--offset) - var(--space-l));
+  scroll-margin-block-start: calc(var(--offset) + var(--space-s));
 }
 
 #overview {

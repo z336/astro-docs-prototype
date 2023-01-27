@@ -9,6 +9,7 @@ const articleTitle = frontmatter.title;
 const overview = frontmatter.overview;
 
 const showTableOfContents = headings.length == 0 ? false : true;
+const showOverview = overview == undefined || null ? false : true;
 ---
 
 <BaseLayout pageTitle={articleTitle}>
@@ -28,12 +29,12 @@ const showTableOfContents = headings.length == 0 ? false : true;
       ''
     )
   }
-  <article class="flow | prose | content">
+  <article class="flow | prose | content" id="content">
     <nav class="breadcrumbs">
       <Breadcrumbs frontmatter={frontmatter} url={url} />
     </nav>
-    <h1 id="content">{articleTitle}</h1>
-    <p id="overview">{overview}</p>
+    <h1>{articleTitle}</h1>
+    {showOverview ? <p id="overview">{overview}</p> : ''}
     <slot />
     <Help />
   </article>
