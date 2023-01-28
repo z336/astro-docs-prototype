@@ -14,14 +14,14 @@ const showOverview = overview == undefined || null ? false : true;
 
 <BaseLayout pageTitle={articleTitle}>
   <aside class="sidebar" id="sidebar">
-    <nav class="sticky">
+    <nav class="sticky" aria-label="articles">
       <DocsMenu />
     </nav>
   </aside>
   {
     showTableOfContents ? (
       <aside class="table-of-contents">
-        <nav class="sticky">
+        <nav class="sticky" aria-label="table of contents">
           <TableOfContents headings={headings} />
         </nav>
       </aside>

@@ -3,8 +3,6 @@ import { Picture } from '@astrojs/image/components';
 
 const { src, caption, ...attrs } = Astro.props;
 
-console.log(Astro.props);
-
 const showCaption = caption === undefined || null ? false : true;
 ---
 
