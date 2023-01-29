@@ -7,11 +7,6 @@ export default function WindowWidth() {
     setWidth(window.innerWidth);
   }
 
-  // useEffect(() => {
-  //   window.addEventListener('load', size);
-  //   return () => window.removeEventListener('load', size);
-  // }, []);
-
   useEffect(() => {
     size();
     window.addEventListener('resize', size);
