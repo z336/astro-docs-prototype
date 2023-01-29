@@ -7,5 +7,12 @@
     position: absolute;
     right: var(--gutter);
     bottom: var(--gutter);
+    border: var(--color-light) solid var(--border-thin);
+    background-color: transparent;
+    color: var(--color-light);
+    &:is(:hover) {
+      background-color: var(--color-light);
+      color: var(--color-dark);
+    }
   }
 }

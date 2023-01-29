@@ -81,8 +81,8 @@ a:not([href*='astro-docs-prototype.com/']):not([href^='#']):not(
 button {
   display: inline-block;
   border: var(--color-dark) solid var(--border-thin);
-  padding-inline: var(--space-2xs);
-  padding-block: var(--space-3xs);
+  padding-inline: var(--space-2xs-xs);
+  padding-block: var(--space-3xs-2xs);
   border-radius: var(--border-radius);
   background-color: var(--color-light);
   color: var(--color-dark);
