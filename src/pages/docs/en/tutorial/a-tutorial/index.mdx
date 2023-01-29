@@ -56,7 +56,7 @@ function Test() {
 }
 ```
 
-```css
+```scss
 .astro-code {
   position: relative;
   max-width: var(--measure);
@@ -66,8 +66,24 @@ function Test() {
     position: absolute;
     right: var(--gutter);
     bottom: var(--gutter);
+    border: var(--color-light) solid var(--border-thin);
+    background-color: transparent;
+    color: var(--color-light);
+    &:is(:hover) {
+      background-color: var(--color-light);
+      color: var(--color-dark);
+    }
   }
 }
+```
+
+```
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
 ## Details

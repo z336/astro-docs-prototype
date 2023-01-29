@@ -1,0 +1,4 @@
+title: Docs Prototype
+baseUrl: https://astro-docs-protype.netlify.app
+description: A knowledge base prototype built with Astro and Sass.
+themeColor: '#f9f8f5'

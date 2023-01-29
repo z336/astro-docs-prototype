@@ -12,7 +12,7 @@ const showTableOfContents = headings.length == 0 ? false : true;
 const showOverview = overview == undefined || null ? false : true;
 ---
 
-<BaseLayout pageTitle={articleTitle}>
+<BaseLayout pageTitle={articleTitle} url={url}>
   <aside class="sidebar" id="sidebar">
     <nav class="sticky" aria-label="articles">
       <DocsMenu />
