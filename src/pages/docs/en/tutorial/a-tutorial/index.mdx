@@ -50,9 +50,23 @@ Use callouts to highlight specific information.
 
 Use code blocks for code and plaintext.
 
-```plaintext
+```javascript
 function Test() {
   console.log('hello');
+}
+```
+
+```css
+.astro-code {
+  position: relative;
+  max-width: var(--measure);
+  padding: var(--gutter);
+  border-radius: var(--border-radius);
+  button {
+    position: absolute;
+    right: var(--gutter);
+    bottom: var(--gutter);
+  }
 }
 ```
 
