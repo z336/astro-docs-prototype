@@ -1,13 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import DocsMenu from '../components/DocsMenu.astro';
+import DocsMenu from '../components/DocsMenu';
 const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <aside class="sidebar" id="sidebar">
     <nav class="sticky" aria-label="articles">
-      <DocsMenu />
+      <DocsMenu client:load />
     </nav>
   </aside>
   <article class="flow | prose | content | page" id="content">

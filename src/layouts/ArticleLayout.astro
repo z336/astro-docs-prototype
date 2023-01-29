@@ -1,9 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import DocsMenu from '../components/DocsMenu.astro';
+import DocsMenu from '../components/DocsMenu';
 import Help from '../components/Help.astro';
-import TableOfContents from '../components/TableOfContents.astro';
+import TableOfContents from '../components/TableOfContents';
+
 const { frontmatter, headings, url } = Astro.props;
 const articleTitle = frontmatter.title;
 const overview = frontmatter.overview;
@@ -15,14 +16,14 @@ const showOverview = overview == undefined || null ? false : true;
 <BaseLayout pageTitle={articleTitle}>
   <aside class="sidebar" id="sidebar">
     <nav class="sticky" aria-label="articles">
-      <DocsMenu />
+      <DocsMenu client:idle url={url} />
     </nav>
   </aside>
   {
     showTableOfContents ? (
       <aside class="table-of-contents">
         <nav class="sticky" aria-label="table of contents">
-          <TableOfContents headings={headings} />
+          <TableOfContents client:idle headings={headings} />
         </nav>
       </aside>
     ) : (

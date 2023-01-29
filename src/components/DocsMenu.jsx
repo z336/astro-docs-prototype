@@ -1,19 +1,22 @@
----
-const currentPath = Astro.url.pathname;
+import WindowWidth from '../hooks/useWindowWidth';
 import docs from '../data/docs.yaml';
----
 
-{
-  docs.map((section) => {
+export default function DocsMenu({ url }) {
+  const { width } = WindowWidth();
+
+  const setOpenAttribute = width <= 1280 ? false : true;
+  const currentUrl = `${url}/`;
+
+  return docs.map((section) => {
     return (
-      <details class="menu | left" open="">
+      <details class="menu | left" open={setOpenAttribute}>
         <summary>{section.title}</summary>
         <ul class="flow | current-page" role="list">
           <li>
             <a
               href={section.url}
               aria-current={`${
-                currentPath === `${section.url}` ? 'page' : 'false'
+                currentUrl === `${section.url}` ? 'page' : 'false'
               }`}
             >
               {section.title}
@@ -25,7 +28,7 @@ import docs from '../data/docs.yaml';
                 <a
                   href={article.url}
                   aria-current={`${
-                    currentPath === `${article.url}` ? 'page' : 'false'
+                    currentUrl === `${article.url}` ? 'page' : 'false'
                   }`}
                 >
                   {article.title}
@@ -36,5 +39,5 @@ import docs from '../data/docs.yaml';
         </ul>
       </details>
     );
-  })
+  });
 }

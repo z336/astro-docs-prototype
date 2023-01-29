@@ -1,12 +1,12 @@
 ---
-import DocsMenu from './DocsMenu.astro';
+import DocsMenu from './DocsMenu';
 import PageMenu from './PageMenu.astro';
 import Search from './Search.astro';
 ---
 
 <nav class="navbar" id="mainnav" aria-label="primary">
   <div>
-    <DocsMenu />
+    <DocsMenu client:visible />
     <PageMenu />
     <Search />
   </div>
