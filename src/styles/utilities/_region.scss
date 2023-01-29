@@ -1,4 +1,4 @@
 .region {
-  padding-top: var(--region-space-top, var(--space-l));
-  padding-bottom: var(--region-space-bottom, var(--space-l));
+  padding-block-start: var(--region-space-top, var(--space-l));
+  padding-block-end: var(--region-space-bottom, var(--space-l));
 }
