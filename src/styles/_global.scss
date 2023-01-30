@@ -93,7 +93,8 @@ button {
   color: var(--color-dark);
   cursor: pointer;
   &:is(:hover, :focus) {
-    background-color: var(--color-grey-light);
+    text-decoration: underline;
+    text-underline-offset: 0.35rem;
   }
 }
 
