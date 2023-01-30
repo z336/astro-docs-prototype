@@ -6,12 +6,15 @@
   button {
     position: absolute;
     right: var(--gutter);
-    bottom: var(--gutter);
+    top: var(--gutter);
     border: var(--color-light) solid var(--border-thin);
+    font-size: var(--step--1);
     background-color: transparent;
     color: var(--color-light);
-    &:is(:hover) {
-      background-color: var(--color-grey-dark);
+    &:is(:hover, :focus) {
+      // background-color: var(--color-grey-dark);
+      text-decoration: underline;
+      text-underline-offset: 0.35rem;
     }
   }
 }
