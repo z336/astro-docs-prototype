@@ -71,7 +71,6 @@ All commands are run from the root of the project, from a terminal:
 - [Astro](https://docs.astro.build)
 - [Sass](https://sass-lang.com/)
 - [CUBE CSS](https://cube.fyi/)
-- [Markdown Guide](https://www.markdownguide.org/)
 - [MDX](https://mdxjs.com/)
 - [Preact](https://preactjs.com/)
 - [Yaml](https://quickref.me/yaml)
