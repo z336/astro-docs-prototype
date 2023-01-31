@@ -16,6 +16,11 @@ const { pageTitle, url } = Astro.props;
     <link rel="canonical" href=`${data.baseUrl}${url}` />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
+    <script>
+      console.log(
+        `Empty script tag reduces FF FOUC bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468"`
+      );
+    </script>
   </head>
   <body id="top">
     <Header />

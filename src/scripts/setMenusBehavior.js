@@ -26,3 +26,5 @@ updateOpenPage();
 
 window.addEventListener('resize', updateDetailsAttribute);
 window.addEventListener('resize', updateOpenPage);
+
+// Todo: update names and consider changing to arrow functions just to button down the scope and be consistent with the other js files
