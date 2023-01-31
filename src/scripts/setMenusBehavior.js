@@ -9,13 +9,20 @@ const currentSideBarPage = document.querySelector(
 function updateDetailsAttribute() {
   if (window.innerWidth <= 1280) {
     menus.forEach((menu) => menu.removeAttribute('open'));
-    currentNavPage.closest('details').setAttribute('open', '');
-    currentSideBarPage.closest('details').setAttribute('open', '');
   } else {
     menus.forEach((menu) => menu.setAttribute('open', ''));
   }
 }
 
+function updateOpenPage() {
+  if (window.innerWidth <= 1280 && currentNavPage && currentSideBarPage) {
+    currentNavPage.closest('details').setAttribute('open', '');
+    currentSideBarPage.closest('details').setAttribute('open', '');
+  }
+}
+
 updateDetailsAttribute();
+updateOpenPage();
 
 window.addEventListener('resize', updateDetailsAttribute);
+window.addEventListener('resize', updateOpenPage);
