@@ -3,10 +3,10 @@ const currentPath = Astro.url.pathname;
 import pages from '../data/pages.yaml';
 ---
 
-{
-  pages.map((page) => {
-    return (
-      <ul class="pages | current-page" role="list">
+<ul class="pages | current-page" role="list">
+  {
+    pages.map((page) => {
+      return (
         <li>
           <a
             href={page.url}
@@ -15,7 +15,7 @@ import pages from '../data/pages.yaml';
             {page.title}
           </a>
         </li>
-      </ul>
-    );
-  })
-}
+      );
+    })
+  }
+</ul>
